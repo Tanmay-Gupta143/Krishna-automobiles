@@ -1,0 +1,103 @@
+---
+name: "[Legacy] Jemit Dark Theme"
+slug: legacy-theme-trial1-theme_726454335877
+modes: [light]
+color:
+  palette:
+    canvas: "#ffffff"
+    ink: "#1a1a1a"
+    ink-2: "#555555"
+    ink-3: "#8a8a8a"
+    line: "#e2e2e2"
+    primary: "#ffffff"
+    on-primary: "#ffffff"
+    k-color-primary: "#ffffff"
+    k-color-primary-hover: "#f0f0f0"
+    k-color-secondary: "#999999"
+    k-color-bg-page: "#000000"
+    k-color-bg-surface: "#0a0a0a"
+    k-color-bg-surface-hover: "#111111"
+    k-color-text-primary: "#ffffff"
+    k-color-text-secondary: "#999999"
+    k-color-text-muted: "#666666"
+    k-color-border: "#1f1f1f"
+    k-color-border-hover: "#333333"
+    k-color-accent: "#ff0000"
+    k-color-success: "#00ff00"
+    k-color-warning: "#ffff00"
+    k-color-error: "#ff0000"
+  semantic:
+    background.canvas: "{color.palette.canvas}"
+    surface.default: "{color.palette.canvas}"
+    surface.raised: "{color.palette.canvas}"
+    text.primary: "{color.palette.ink}"
+    text.secondary: "{color.palette.ink-2}"
+    text.tertiary: "{color.palette.ink-3}"
+    text.link: "{color.palette.primary}"
+    border.default: "{color.palette.line}"
+    border.focus: "{color.palette.primary}"
+    primary.bg: "{color.palette.primary}"
+    primary.fg: "{color.palette.on-primary}"
+typography:
+  family: { primary: "Inter" }
+  textStyle:
+    heading-lg: { fontFamily: "Inter", fontSize: "24px", fontWeight: 600, lineHeight: 1.2 }
+    body-md: { fontFamily: "Inter", fontSize: "15px", fontWeight: 400, lineHeight: 1.5 }
+---
+
+> Migrated from a legacy canvas theme.
+> The palette above is mapped from the original tokens, which are also preserved below.
+
+## Legacy theme tokens
+
+- `--k-color-primary`: `#ffffff`
+- `--k-color-primary-hover`: `#f0f0f0`
+- `--k-color-secondary`: `#999999`
+- `--k-color-bg-page`: `#000000`
+- `--k-color-bg-surface`: `#0a0a0a`
+- `--k-color-bg-surface-hover`: `#111111`
+- `--k-color-text-primary`: `#ffffff`
+- `--k-color-text-secondary`: `#999999`
+- `--k-color-text-muted`: `#666666`
+- `--k-color-border`: `#1f1f1f`
+- `--k-color-border-hover`: `#333333`
+- `--k-color-accent`: `#ff0000`
+- `--k-color-success`: `#00ff00`
+- `--k-color-warning`: `#ffff00`
+- `--k-color-error`: `#ff0000`
+- `--k-font-family-heading`: `Inter, sans-serif`
+- `--k-font-family-body`: `Inter, sans-serif`
+- `--k-font-size-xs`: `0.75rem`
+- `--k-font-size-sm`: `0.875rem`
+- `--k-font-size-base`: `1rem`
+- `--k-font-size-lg`: `1.125rem`
+- `--k-font-size-xl`: `1.25rem`
+- `--k-font-size-2xl`: `1.5rem`
+- `--k-font-size-3xl`: `1.875rem`
+- `--k-font-size-4xl`: `2.25rem`
+- `--k-font-size-5xl`: `3rem`
+- `--k-font-weight-normal`: `400`
+- `--k-font-weight-medium`: `500`
+- `--k-font-weight-semibold`: `600`
+- `--k-font-weight-bold`: `700`
+- `--k-spacing-xs`: `0.25rem`
+- `--k-spacing-sm`: `0.5rem`
+- `--k-spacing-md`: `1rem`
+- `--k-spacing-lg`: `1.5rem`
+- `--k-spacing-xl`: `2rem`
+- `--k-spacing-2xl`: `3rem`
+- `--k-spacing-3xl`: `4rem`
+- `--k-radius-sm`: `0.125rem`
+- `--k-radius-md`: `0.75rem`
+- `--k-radius-lg`: `1rem`
+- `--k-radius-xl`: `1.5rem`
+- `--k-radius-full`: `9999px`
+- `--k-shadow-sm`: `0 1px 2px 0 rgba(0, 0, 0, 0.05)`
+- `--k-shadow-md`: `0 4px 6px -1px rgba(0, 0, 0, 0.1)`
+- `--k-shadow-lg`: `0 10px 15px -3px rgba(0, 0, 0, 0.1)`
+- `--k-border-width-default`: `1px`
+- `--k-border-width-thick`: `2px`
+
+## Fonts
+
+- Inter — https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap

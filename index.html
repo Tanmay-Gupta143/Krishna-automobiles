@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Automobiles - Precision</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="magnetic-dock-container">
+        <div class="dock-wrapper">
+            <div class="pr-5 mr-2 border-r border-white/10 flex items-center">
+                <img alt="Logo" class="h-10 w-auto" src="assets/logo.png">
+            </div>
+            <div class="dock-item">
+                <i class="ti ti-smart-home text-2xl"></i>
+                <span class="dock-tooltip">Home</span>
+            </div>
+            <div class="dock-item">
+                <i class="ti ti-tools text-2xl"></i>
+                <span class="dock-tooltip">Services</span>
+            </div>
+            <div class="dock-item bg-[var(--k-color-accent)] !border-none">
+                <i class="ti ti-phone-filled text-2xl"></i>
+                <span class="dock-tooltip">Call Now</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="relative min-h-[120vh] flex flex-col justify-end px-6 md:px-12 pb-24 md:pb-40 bg-black overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <video autoplay class="w-full h-full object-cover brightness-75" loop muted playsinline poster="https://images.pexels.com/videos/30355025/pexels-photo-30355025.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200" preload="metadata" src="https://videos.pexels.com/video-files/30355025/13011391_640_360_60fps.mp4"></video>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+        </div>
+        <div class="relative z-10 w-full max-w-7xl mx-auto">
+            <h1 class="text-[clamp(2.5rem,15vw,11rem)] font-black uppercase leading-[0.9] tracking-[-0.06em]">
+                KRISHNA <br> <span class="text-[var(--k-color-accent)]">AUTOMOBILES</span>
+            </h1>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-40 bg-black flex justify-center items-center px-6 md:px-8 border-b border-white/5">
+        <div class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row flex-wrap gap-6 md:gap-12 justify-center">
+            <a class="bg-white text-black px-10 py-6 md:px-16 md:py-10 rounded-2xl md:rounded-[2.5rem] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] text-lg md:text-2xl flex items-center justify-center gap-4 md:gap-6 hover:bg-[var(--k-color-accent)] hover:text-white transition-all shadow-3xl group" href="tel:+910000000000">
+                <i class="ti ti-phone-filled text-2xl md:text-4xl group-hover:rotate-12 transition-transform"></i> CALL TO BOOK
+            </a>
+            <a class="bg-[#25D366] text-white px-10 py-6 md:px-16 md:py-10 rounded-2xl md:rounded-[2.5rem] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] text-lg md:text-2xl flex items-center justify-center gap-4 md:gap-6 hover:scale-105 transition-all shadow-3xl" href="https://wa.me/910000000000" target="_blank">
+                <i class="ti ti-brand-whatsapp text-3xl md:text-5xl"></i> WHATSAPP
+            </a>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-24 bg-black border-y border-white/5 overflow-hidden">
+        <div class="brand-marquee">
+            <div class="brand-track">
+                <span class="brand-item text-2xl md:text-5xl font-black text-white/15 uppercase tracking-[0.2em] md:tracking-[0.4em]">HONDA</span>
+                <span class="brand-item text-2xl md:text-5xl font-black text-white/15 uppercase tracking-[0.2em] md:tracking-[0.4em]">HERO MOTOCORP</span>
+                <span class="brand-item text-2xl md:text-5xl font-black text-white/15 uppercase tracking-[0.2em] md:tracking-[0.4em]">BAJAJ AUTO</span>
+                <span class="brand-item text-2xl md:text-5xl font-black text-white/15 uppercase tracking-[0.2em] md:tracking-[0.4em]">TVS MOTOR</span>
+                <span class="brand-item text-2xl md:text-5xl font-black text-white/15 uppercase tracking-[0.2em] md:tracking-[0.4em]">YAMAHA</span>
+                <span class="brand-item text-2xl md:text-5xl font-black text-white/15 uppercase tracking-[0.2em] md:tracking-[0.4em]">SUZUKI</span>
+                <span class="brand-item text-2xl md:text-5xl font-black text-white/15 uppercase tracking-[0.2em] md:tracking-[0.4em]">ROYAL ENFIELD</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 md:py-32 px-6 md:px-8 bg-black" id="services">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 md:mb-24 gap-8 md:gap-12">
+                <div class="max-w-4xl">
+                    <span class="text-[var(--k-color-accent)] font-black text-[10px] md:text-xs uppercase tracking-[0.4em] md:tracking-[0.6em] block mb-4 md:mb-6">Capabilities</span>
+                    <h2 class="text-4xl md:text-[9rem] font-black tracking-tighter leading-none">Service Menu.</h2>
+                </div>
+                <p class="text-white/30 max-w-sm font-bold uppercase text-[9px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] leading-loose">Expert maintenance for Activa, Pulsar, Bullet, and every machine in between.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <div class="service-card p-8 md:p-12 rounded-3xl border border-white/5 hover:border-[var(--k-color-accent)]/40 transition-all group">
+                    <i class="ti ti-settings-automation text-3xl md:text-4xl text-[var(--k-color-accent)] mb-6 md:mb-10 block"></i>
+                    <h3 class="text-xl md:text-2xl font-black text-white mb-2 uppercase">General Service</h3>
+                    <p class="text-sm text-white/40 mb-6 leading-relaxed">Full check-up, oil change, and thorough washing.</p>
+                    <span class="price-tag">₹600</span>
+                </div>
+                <div class="service-card p-8 md:p-12 rounded-3xl border border-white/5 hover:border-[var(--k-color-accent)]/40 transition-all group">
+                    <i class="ti ti-engine text-3xl md:text-4xl text-[var(--k-color-accent)] mb-6 md:mb-10 block"></i>
+                    <h3 class="text-xl md:text-2xl font-black text-white mb-2 uppercase">Engine Repair</h3>
+                    <p class="text-sm text-white/40 mb-6 leading-relaxed">Piston work, timing, and total restoration.</p>
+                    <span class="price-tag">Quote Based</span>
+                </div>
+                <div class="service-card p-8 md:p-12 rounded-3xl border border-white/5 hover:border-[var(--k-color-accent)]/40 transition-all group">
+                    <i class="ti ti-circle-half-2 text-3xl md:text-4xl text-[var(--k-color-accent)] mb-6 md:mb-10 block"></i>
+                    <h3 class="text-xl md:text-2xl font-black text-white mb-2 uppercase">Brake Repair</h3>
+                    <p class="text-sm text-white/40 mb-6 leading-relaxed">Brake pad & oil service for total safety.</p>
+                    <span class="price-tag">₹150</span>
+                </div>
+                <div class="service-card p-8 md:p-12 rounded-3xl border border-white/5 hover:border-[var(--k-color-accent)]/40 transition-all group">
+                    <i class="ti ti-battery-automotive text-3xl md:text-4xl text-[var(--k-color-accent)] mb-6 md:mb-10 block"></i>
+                    <h3 class="text-xl md:text-2xl font-black text-white mb-2 uppercase">Battery Service</h3>
+                    <p class="text-sm text-white/40 mb-6 leading-relaxed">Industrial charging & genuine Exide spares.</p>
+                    <span class="price-tag">₹150</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-[var(--k-color-accent)] text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 flex flex-col md:flex-row justify-between items-center gap-10 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10 text-center md:text-left">
+                <i class="ti ti-bike-off text-4xl md:text-6xl"></i>
+                <div>
+                    <h3 class="text-3xl md:text-6xl font-black tracking-tighter mb-2 uppercase">Activa start nahi ho rahi?</h3>
+                    <p class="text-white font-black text-lg md:text-2xl uppercase tracking-[0.2em] opacity-80">Call us now. We'll pick it up.</p>
+                </div>
+            </div>
+            <a class="bg-black text-white px-10 py-6 md:px-16 md:py-8 rounded-2xl font-black uppercase tracking-[0.4em] text-xl md:text-2xl flex items-center gap-4 hover:bg-black/90 transition-all shadow-3xl" href="tel:+910000000000">
+                <i class="ti ti-phone-filled"></i> CALL NOW
+            </a>
+        </div>
+    </section>
+
+    <section class="pt-24 md:pt-48 pb-12 md:pb-24 px-6 md:px-8 bg-[var(--k-color-bg-surface)] overflow-hidden" id="trust">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24 items-center mb-12 md:mb-20">
+                <div class="lg:col-span-7 space-y-12">
+                    <div>
+                        <span class="text-[var(--k-color-accent)] font-black text-xs uppercase tracking-[0.6em] block mb-6">Trust & Reliability</span>
+                        <h2 class="text-5xl md:text-9xl font-black tracking-tighter leading-[0.85] mb-8">Genuine Parts.<br>Master Hands.</h2>
+                        <p class="text-white/40 text-lg md:text-2xl max-w-2xl leading-relaxed font-light">Since 2009, we've built a legacy of trust by treating every machine with surgical precision.</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                        <div class="flex gap-6">
+                            <div class="w-14 h-14 bg-black rounded-2xl border border-white/5 flex items-center justify-center shrink-0 shadow-2xl">
+                                <i class="ti ti-shield-check text-2xl md:text-4xl text-[var(--k-color-accent)]"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg md:text-2xl font-black text-white mb-2 uppercase tracking-tighter">100% Genuine Spares</h4>
+                                <p class="text-white/30 text-sm md:text-base leading-relaxed">Exide, Mobil, Castrol, and Studds.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="w-14 h-14 bg-black rounded-2xl border border-white/5 flex items-center justify-center shrink-0 shadow-2xl">
+                                <i class="ti ti-user-check text-2xl md:text-4xl text-[var(--k-color-accent)]"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg md:text-2xl font-black text-white mb-2 uppercase tracking-tighter">Expert Technicians</h4>
+                                <p class="text-white/30 text-sm md:text-base leading-relaxed">Over 15 years of performance experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="aspect-[3/4] rounded-3xl overflow-hidden border border-white/10">
+                            <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all" src="https://images.unsplash.com/photo-1661745797171-ac2861891e12?auto=format&w=600&q=80&fit=crop">
+                        </div>
+                        <div class="aspect-square rounded-3xl overflow-hidden border border-white/10">
+                            <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all" src="https://images.pexels.com/photos/5252118/pexels-photo-5252118.jpeg?auto=compress&cs=tinysrgb&w=600&q=80">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-12">
+                        <div class="aspect-square rounded-3xl overflow-hidden border border-white/10">
+                            <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all" src="https://images.pexels.com/photos/1683406/pexels-photo-1683406.jpeg?auto=compress&cs=tinysrgb&w=600&q=80">
+                        </div>
+                        <div class="aspect-[3/4] rounded-3xl overflow-hidden border border-white/10">
+                            <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all" src="https://images.pexels.com/photos/17883709/pexels-photo-17883709.png?auto=compress&cs=tinysrgb&w=600&q=80">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative min-h-[160vh] md:min-h-[120vh] bg-black pt-16 pb-32 px-6 md:px-12 overflow-hidden flex flex-col items-center" id="testimonials">
+        <div class="relative z-10 w-full max-w-7xl">
+            <div class="mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
+                <h2 class="text-6xl md:text-[9rem] font-black uppercase tracking-tighter leading-[0.85] text-white">THE RIDER'S <br><span class="text-[var(--k-color-accent)]">WORD.</span></h2>
+                <p class="text-white/40 font-bold uppercase text-[10px] tracking-[0.3em] text-right">Straight from the floor.</p>
+            </div>
+            <div class="relative w-full min-h-[100vh] flex items-center justify-center" id="testimonial-scatter-zone">
+                <div class="relative z-40 scale-110 md:scale-125">
+                    <div class="bg-[var(--k-color-accent)] p-12 md:p-20 brutalist-border shadow-[20px_20px_0_white] transform -rotate-2">
+                        <span class="text-[10px] font-black text-black uppercase tracking-[0.4em] mb-4 block">Unstoppable Trust</span>
+                        <h3 class="text-[10rem] md:text-[15rem] font-black text-black leading-none tracking-tighter">4.8</h3>
+                        <div class="flex items-center gap-4 mt-4">
+                            <div class="flex text-black text-2xl"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div>
+                            <span class="text-xs font-black text-black uppercase tracking-widest opacity-60">Verified Reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="absolute top-[2%] left-[8%] z-20 rotate-[-6deg] scattered-card">
+                    <div class="bg-[var(--k-color-bg-surface)] p-8 brutalist-border border-l-4 border-l-[var(--k-color-accent)] max-w-[320px]">
+                        <div class="flex text-[var(--k-color-accent)] text-xs mb-3"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div>
+                        <p class="text-base font-black text-white review-text">"Had a very good experience. I visited many places but couldn't find anyone who could repair my electric scooty. Krishna Automobile fixed it perfectly. Highly recommended!"</p>
+                        <span class="text-[10px] font-black uppercase text-white/40 mt-4 block">Pradeep Saroj</span>
+                    </div>
+                </div>
+
+                <div class="absolute top-[5%] right-[10%] z-20 rotate-[4deg] scattered-card">
+                    <div class="bg-[var(--k-color-bg-surface)] p-8 brutalist-border border-l-4 border-l-white/20 max-w-[340px]">
+                        <div class="flex text-[var(--k-color-accent)] text-xs mb-3"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star"></i></div>
+                        <p class="text-base text-white/70 review-text">"Mechanics Shiva and Deepak are highly skilled and provide excellent service. However, I felt the spare parts were priced slightly higher than expected."</p>
+                        <span class="text-[10px] font-black uppercase text-white/40 mt-4 block">Roshan Anand</span>
+                    </div>
+                </div>
+
+                <div class="absolute top-[35%] left-[2%] z-30 rotate-[3deg] scattered-card">
+                    <div class="bg-[var(--k-color-bg-surface)] p-8 brutalist-border shadow-[8px_8px_0_var(--k-color-accent)] max-w-[300px]">
+                        <div class="flex items-center gap-2 mb-3 text-[var(--k-color-accent)]"><i class="ti ti-bolt"></i><span class="text-[9px] font-black uppercase">OLA EXPERT</span></div>
+                        <p class="text-base text-white review-text">"Excellent Ola repair centre. They successfully resolved my electric charging system issue."</p>
+                        <span class="text-[10px] font-black uppercase text-white/40 mt-4 block">Paresh Jani</span>
+                    </div>
+                </div>
+
+                <div class="absolute top-[40%] right-[2%] z-30 rotate-[-5deg] scattered-card">
+                    <div class="bg-[var(--k-color-bg-surface)] p-8 brutalist-border shadow-[12px_12px_0_white] max-w-[320px]">
+                        <p class="text-base text-white review-text">"Excellent shop for repairs and auto parts. They offer quality products, quick service, and complete customer satisfaction."</p>
+                        <span class="text-[10px] font-black uppercase text-white/40 mt-4 block">Mahendra Sunar</span>
+                    </div>
+                </div>
+
+                <div class="absolute bottom-[20%] left-[5%] z-20 rotate-[-4deg] scattered-card">
+                    <div class="bg-[var(--k-color-bg-surface)] p-8 brutalist-border border-l-4 border-l-[var(--k-color-accent)] max-w-[350px]">
+                        <p class="text-base text-white review-text">"My Ola scooter was repaired perfectly. Very satisfied with the service."</p>
+                        <span class="text-[10px] font-black uppercase text-white/40 mt-4 block">Rajesh Kumar Gupta</span>
+                    </div>
+                </div>
+
+                <div class="absolute bottom-[25%] right-[5%] z-20 rotate-[6deg] scattered-card">
+                    <div class="bg-[var(--k-color-bg-surface)] p-8 brutalist-border shadow-[12px_12px_0_var(--k-color-accent)] max-w-[300px]">
+                        <p class="text-base text-white review-text">"Excellent service. Batteries and tyres are readily available, and the repair work is outstanding."</p>
+                        <span class="text-[10px] font-black uppercase text-white/40 mt-4 block">Sonu Sharma</span>
+                    </div>
+                </div>
+
+                <div class="absolute bottom-[5%] left-[25%] z-20 rotate-[-2deg] scattered-card">
+                    <div class="bg-[var(--k-color-bg-surface)] p-6 brutalist-border border-t-4 border-t-white/20 max-w-[280px]">
+                        <p class="text-sm text-white/60 italic review-text">"Very good service at affordable rates. Great value for money."</p>
+                        <span class="text-[10px] font-black uppercase text-white/40 mt-3 block">Neeha Chauhan</span>
+                    </div>
+                </div>
+
+                <div class="absolute top-[20%] right-[30%] z-10 rotate-[12deg] opacity-40 scale-75">
+                    <div class="bg-white/5 p-4 brutalist-border max-w-[200px]">
+                        <p class="text-[10px] text-white">"Very fast service with experienced mechanics."</p>
+                        <span class="text-[8px] font-black uppercase text-[var(--k-color-accent)]">Raju Raza</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 md:py-32 px-6 md:px-8 border-t border-white/5 bg-black">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-12 text-center lg:text-left">
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <img alt="Logo" class="h-16 w-auto" src="assets/logo.png">
+                <p class="text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">Krishna Automobiles Mira Road East. Since 2009.</p>
+            </div>
+            <div class="flex gap-6">
+                <a class="w-16 h-16 border border-white/10 rounded-2xl flex items-center justify-center hover:bg-[var(--k-color-accent)] transition-all" href="#"><i class="ti ti-phone-filled text-2xl text-white"></i></a>
+                <a class="w-16 h-16 border border-white/10 rounded-2xl flex items-center justify-center hover:bg-[#25D366] transition-all" href="#"><i class="ti ti-brand-whatsapp text-3xl text-white"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@5/bundled/locomotive-scroll.min.js"></script>
+    <script type="module">
+        import Lenis from "https://esm.sh/lenis@1";
+        const lenis = new Lenis({ autoRaf: true });
+        const locomotiveScroll = new LocomotiveScroll();
+        gsap.registerPlugin(ScrollTrigger);
+
+        const dock = document.getElementById('magnetic-dock-container');
+        gsap.to(dock, {
+            y: 0, opacity: 1, ease: "power3.out",
+            scrollTrigger: { trigger: "body", start: "100px top", scrub: 1 }
+        });
+    </script>
+</body>
+</html>

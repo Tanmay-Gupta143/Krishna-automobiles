@@ -1,0 +1,93 @@
+---
+name: "[Legacy SG] Jemit Technical Minimalist"
+slug: legacy-style-guide-style_aa9d3b51ad22
+modes: [light]
+color:
+  palette:
+    canvas: "#ffffff"
+    ink: "#1a1a1a"
+    ink-2: "#555555"
+    ink-3: "#8a8a8a"
+    line: "#e2e2e2"
+    primary: "#ffffff"
+    on-primary: "#ffffff"
+    background: "#000000"
+    surface: "#0a0a0a"
+    secondary: "#999999"
+    accent: "#ff0000"
+    border: "#1f1f1f"
+  semantic:
+    background.canvas: "{color.palette.canvas}"
+    surface.default: "{color.palette.canvas}"
+    surface.raised: "{color.palette.canvas}"
+    text.primary: "{color.palette.ink}"
+    text.secondary: "{color.palette.ink-2}"
+    text.tertiary: "{color.palette.ink-3}"
+    text.link: "{color.palette.primary}"
+    border.default: "{color.palette.line}"
+    border.focus: "{color.palette.primary}"
+    primary.bg: "{color.palette.primary}"
+    primary.fg: "{color.palette.on-primary}"
+typography:
+  family: { primary: "Inter" }
+  textStyle:
+    heading-lg: { fontFamily: "Inter", fontSize: "24px", fontWeight: 600, lineHeight: 1.2 }
+    body-md: { fontFamily: "Inter", fontSize: "15px", fontWeight: 400, lineHeight: 1.5 }
+spacing:
+  section: "120px"
+  gutter: "24px"
+radius:
+  card: "12px"
+  button: "9999px"
+---
+
+> Migrated from a legacy style guide.
+> The palette above is mapped from the original tokens, which are also preserved below.
+
+## Legacy style-guide tokens
+
+### Colors
+
+- `background`: `#000000`
+- `surface`: `#0a0a0a`
+- `primary`: `#ffffff`
+- `secondary`: `#999999`
+- `accent`: `#ff0000`
+- `border`: `#1f1f1f`
+
+### Typography
+
+- `heading`: `{"family":"Inter","size":"72px","url":"https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"}`
+- `body`: `{"family":"Inter","size":"16px","url":"https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"}`
+
+### Spacing
+
+- `section`: `120px`
+- `gutter`: `24px`
+
+### Radius
+
+- `card`: `12px`
+- `button`: `9999px`
+
+## Design instructions
+
+### 1. Visual Foundation
+The design language is rooted in "Digital Brutalism" for a technical, secure feel. Start with a true black (`#000000`) background. Use 1px solid borders (`#ffffff` at 10% opacity) for section dividers and component containers to create a structured grid.
+
+### 2. Typography
+Use **Inter** for all text. Headings are oversized, bold, and tightly tracked (letter-spacing: `-0.04em`). Labels and metadata use uppercase with increased letter-spacing (`0.1em`). Use large, 2-digit index numbers (e.g., 01, 02) to mark section headers.
+
+### 3. Layout Signatures
+Adopt an asymmetric grid. Hero sections should feature massive typography. Use thin horizontal rule lines that span the full viewport width to separate logical areas. Content blocks often stack vertically with generous margins, creating a rhythmic, top-to-bottom flow.
+
+### 4. Component Styling
+- **Buttons:** Pill-shaped (`rounded-full`) with high contrast—either solid white with black text or a 1px white outline.
+- **Cards:** Subtle `bg-[#0a0a0a]` with `rounded-xl` and 1px borders.
+- **Tickers:** Implement horizontal marquees for lists like "Featured Projects" or "Feedbacks" to add motion.
+
+### 5. Color Treatment
+The palette is monochromatic (Black, White, Gray) with a single high-intensity accent like **Red** (`#ff0000`). Use the accent for status indicators, active states, or small decorative dots.
+
+### 6. Imagery & Motifs
+Photos should have a high-contrast, moody aesthetic. Use PNG cutouts and 3D technical renders (cybersecurity-themed) floating on the grid. Subtle radial glows (gradients with 0.1 opacity) can be placed behind key assets to provide depth without breaking the minimal vibe.
