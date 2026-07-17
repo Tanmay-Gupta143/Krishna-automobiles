@@ -122,6 +122,7 @@ export async function POST(request: Request) {
     console.info("[contact] submitting request to Web3Forms");
     response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
+      headers: { Accept: "application/json" },
       body: web3FormsData,
       cache: "no-store",
     });
