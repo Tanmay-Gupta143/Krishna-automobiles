@@ -11,6 +11,7 @@ export function ContactForm() {
   const isSubmitting = useRef(false);
   const [messageLength, setMessageLength] = useState(0);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "sending" | "error">("idle");
+  const [submitError, setSubmitError] = useState("");
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -26,6 +27,7 @@ export function ContactForm() {
     }
 
     setSubmitStatus("sending");
+    setSubmitError("");
     isSubmitting.current = true;
 
     try {
@@ -33,14 +35,15 @@ export function ContactForm() {
         method: "POST",
         body: new FormData(form),
       });
-      const result = (await response.json()) as { success?: boolean };
+      const result = (await response.json()) as { success?: boolean; message?: string };
 
       if (!response.ok || !result.success) {
-        throw new Error("Web3Forms rejected the submission.");
+        throw new Error(result.message || "Could not send the request. Please try again.");
       }
 
       router.push("/contact/success");
-    } catch {
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "Could not send the request. Please try again.");
       setSubmitStatus("error");
     } finally {
       isSubmitting.current = false;
@@ -123,7 +126,9 @@ export function ContactForm() {
       </label>
 
       {submitStatus === "error" ? (
-        <p className="contact-form-status contact-form-status-error">Could not send the request. Please try again.</p>
+        <p className="contact-form-status contact-form-status-error" role="alert">
+          {submitError}
+        </p>
       ) : null}
 
       <button className="contact-submit" type="submit" disabled={submitStatus === "sending"}>

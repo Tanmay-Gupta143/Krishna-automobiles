@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { PageTransition } from "@/components/ui/page-transition";
 
@@ -65,6 +66,7 @@ export default function RootLayout({
       <body>
         {children}
         <PageTransition />
+        <Analytics />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       </body>
     </html>

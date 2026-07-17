@@ -42,6 +42,7 @@ function isRateLimited(clientId: string) {
 }
 
 export async function POST(request: Request) {
+  console.info("[contact] submission received");
   const requestUrl = new URL(request.url);
   const origin = request.headers.get("origin");
 
@@ -74,6 +75,7 @@ export async function POST(request: Request) {
   const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
 
   if (!accessKey) {
+    console.error("[contact] WEB3FORMS_ACCESS_KEY is not configured");
     return invalid("Contact form is not configured.", 500);
   }
 
@@ -117,19 +119,26 @@ export async function POST(request: Request) {
   let result: { success?: boolean; message?: string };
 
   try {
+    console.info("[contact] submitting request to Web3Forms");
     response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: web3FormsData,
       cache: "no-store",
     });
     result = (await response.json()) as { success?: boolean; message?: string };
-  } catch {
+  } catch (error) {
+    console.error("[contact] Web3Forms request failed", { error: String(error) });
     return invalid("Contact submission failed.", 502);
   }
 
   if (!response.ok || !result.success) {
+    console.error("[contact] Web3Forms rejected the submission", {
+      status: response.status,
+      message: result.message || "No error message returned",
+    });
     return invalid(result.message || "Contact submission failed.", 502);
   }
 
+  console.info("[contact] Web3Forms accepted the submission");
   return NextResponse.json({ success: true });
 }
