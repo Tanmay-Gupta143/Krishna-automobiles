@@ -130,10 +130,22 @@ export async function POST(request: Request) {
       body: JSON.stringify(web3FormsData),
       cache: "no-store",
     });
-    result = (await response.json()) as { success?: boolean; message?: string };
   } catch (error) {
     console.error("[contact] Web3Forms request failed", { error: String(error) });
     return invalid("Contact submission failed.", 502);
+  }
+
+  const responseText = await response.text();
+
+  try {
+    result = JSON.parse(responseText) as { success?: boolean; message?: string };
+  } catch {
+    console.error("[contact] Web3Forms returned a non-JSON response", {
+      status: response.status,
+      contentType: response.headers.get("content-type"),
+      preview: responseText.slice(0, 240).replace(/\s+/g, " "),
+    });
+    return invalid("Contact provider returned an unexpected response.", 502);
   }
 
   if (!response.ok || !result.success) {
