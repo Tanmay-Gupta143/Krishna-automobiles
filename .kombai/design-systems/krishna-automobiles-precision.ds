@@ -1,0 +1,144 @@
+---
+name: Krishna Automobiles
+modes: [dark]
+color:
+  palette:
+    crimson: "#DC143C"
+    accent-red: "#FF0000"
+    deep-gray: "#050505"
+    surface: "#0A0A0A"
+    canvas: "#000000"
+    alabaster: "#E5E4E2"
+    secondary-gray: "#999999"
+    border-dark: "#1F1F1F"
+    white: "#FFFFFF"
+  semantic:
+    background.canvas: "{color.palette.canvas}"
+    surface.default: "{color.palette.surface}"
+    surface.raised: "{color.palette.deep-gray}"
+    text.primary: "{color.palette.white}"
+    text.secondary: "{color.palette.secondary-gray}"
+    text.tertiary: "{color.palette.alabaster}"
+    text.link: "{color.palette.accent-red}"
+    border.default: "{color.palette.border-dark}"
+    border.focus: "{color.palette.accent-red}"
+    primary.bg: "{color.palette.accent-red}"
+    primary.fg: "{color.palette.white}"
+typography:
+  family: { primary: "Inter", alt1: "Instrument Sans", mono: "JetBrains Mono" }
+  textStyle:
+    display-massive: { fontFamily: "Instrument Sans", fontSize: "160px", fontWeight: 900, lineHeight: 0.8, letterSpacing: "-0.08em" }
+    headline-large: { fontFamily: "Instrument Sans", fontSize: "9rem", fontWeight: 900, lineHeight: 0.85, letterSpacing: "-0.06em" }
+    section-title: { fontFamily: "Instrument Sans", fontSize: "4rem", fontWeight: 800, lineHeight: 1, letterSpacing: "-0.04em" }
+    body-large: { fontFamily: "Inter", fontSize: "24px", fontWeight: 500, lineHeight: 1.4, letterSpacing: "0" }
+    body-base: { fontFamily: "Inter", fontSize: "16px", fontWeight: 400, lineHeight: 1.6, letterSpacing: "0" }
+    label-technical: { fontFamily: "Inter", fontSize: "11px", fontWeight: 700, lineHeight: 1, letterSpacing: "0.2em" }
+spacing: { xs: "4px", sm: "8px", md: "16px", lg: "24px", xl: "40px", xxl: "80px" }
+radius: { xs: "2px", sm: "4px", md: "12px", lg: "24px", pill: "9999px" }
+shadow:
+  brutalist: { light: "12px 12px 0 #DC143C", dark: "12px 12px 0 #FF0000" }
+  glow-red: { light: "0 0 50px rgba(255, 0, 0, 0.08)", dark: "0 0 50px rgba(255, 0, 0, 0.15)" }
+elevation:
+  - { level: 0, name: "flat", treatment: "no shadow, black canvas" }
+  - { level: 1, name: "panel", border: "{color.palette.border-dark}", treatment: "1px solid border" }
+  - { level: 2, name: "brutalist", shadow: "{shadow.brutalist}", treatment: "hard offset shadow" }
+border:
+  width: { hairline: "1px", thin: "1.5px", medium: "2px", heavy: "4px" }
+  style: { solid: "solid" }
+opacity: { disabled: 0.4, muted: 0.6, full: 1 }
+motion:
+  duration: { fast: "150ms", normal: "240ms", slow: "400ms", entrance: "1200ms" }
+  easing: { standard: "cubic-bezier(.2,0,0,1)", entrance: "cubic-bezier(0.23, 1, 0.32, 1)" }
+breakpoint:
+  sm: { px: 375, change: "mobile stack" }
+  md: { px: 768, change: "tablet grid" }
+  lg: { px: 1024, change: "small desktop" }
+  xl: { px: 1280, change: "standard desktop" }
+  xxl: { px: 1440, change: "large desktop layout" }
+components:
+  button-primary: { type: button, label: "Execute Service", backgroundColor: "{colors.white}", textColor: "{colors.canvas}", typography: "{typography.label-technical}", rounded: "{rounded.pill}", padding: "16px 40px" }
+  nav-link: { type: link, label: "Services", backgroundColor: "transparent", textColor: "{colors.secondary-gray}", typography: "{typography.label-technical}", rounded: "0", padding: "0" }
+  service-card: { type: card, label: "Service Unit", backgroundColor: "{colors.surface}", textColor: "{colors.white}", typography: "{typography.body-base}", rounded: "{rounded.md}", padding: "32px" }
+assetPalette:
+  overallRelationship: brand-led
+  temperature: cool
+  saturation: natural
+  contrast: high
+  psychologicalRole: "mechanical precision, industrial reliability, and safe sanctuary"
+  usage: "Grayscale photography of mechanical components and workshops paired with high-saturation crimson overlays."
+iconography:
+  role: functional
+  purpose: technical
+  viewBox: "0 0 24 24"
+  strokeWidth: "{border.width.thin}"
+  fill: none
+  stroke: "{color.palette.accent-red}"
+  glyphs:
+    - { name: tool, path: "M7 8l-4 4 4 4M17 8l4 4-4 4M13 4l-2 16" }
+    - { name: phone, path: "M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 11 0 0 1 -15 -15a2 2 0 0 1 2 -2" }
+    - { name: bolt, path: "M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" }
+motionPatterns:
+  entrance-fade-up:
+    type: scroll-reveal
+    trigger: on-view
+    target: section
+    property: [opacity, translateY]
+    from: { opacity: 0, translateY: "80px" }
+    to: { opacity: 1, translateY: "0px" }
+    duration: "{motion.duration.entrance}"
+    easing: "{motion.easing.entrance}"
+    iterations: 1
+    importance: signature
+    replication: { library: gsap, note: "gsap.from with ScrollTrigger" }
+---
+
+# Krishna Automobiles — precision.ds
+
+> An industrial brutalist system for Mumbai's riders. High-contrast typography, technical grids, and signature crimson accents define a brand of surgical mechanical precision.
+
+## Instructions
+- Use `{colors.canvas}` (true black) for page backgrounds to let `{colors.accent-red}` pop.
+- Apply `{shadow.brutalist}` to cards on hover for an aggressive, interactive feel.
+- Headlines should use `{typography.display-massive}` or `{typography.headline-large}` with tight leading (0.8-0.85).
+- Maintain a clear grid system using `{colors.border-dark}` (1px borders) to separate sections.
+
+## Brand & Accent
+- Crimson/Red (`{colors.accent-red}`): Used for highlights, active navigation, and primary branding elements.
+
+## Surface
+- Canvas (`{colors.canvas}`): Primary page background.
+- Surface (`{colors.surface}`): Used for cards and secondary panels to provide subtle separation.
+
+## Fonts
+- **Instrument Sans**: Used for all high-impact headlines and numbers.
+- **Inter**: Primary body text and functional labels.
+- **JetBrains Mono**: Used for technical data, prices, and status indicators.
+
+## Layout
+- Technical grid-based layout.
+- Use wide gutters and significant vertical whitespace (`{spacing.xxl}`) to separate service protocols.
+
+## Assets
+- Imagery should be grayscale or low-saturation with high contrast.
+- Use background video loops (muted/autoplay) to establish the workshop atmosphere.
+
+## Animation & Motion
+- **Lenis** is used for global smooth scrolling.
+- **GSAP + ScrollTrigger** handles all reveal animations and parallax watermarks.
+- Signature: The "Rider's Word" masonry testimonials use staggered entrance reveals.
+
+## Components
+- `button-primary` — White pill button with black technical text.
+- `service-card` — Dark surface panel with industrial corner accents.
+
+## Do
+- Use uppercase for all technical labels and navigation items.
+- Incorporate numerical section IDs (e.g., 01, 02) to emphasize protocols.
+
+## Don't
+- Do not use soft gradients or rounded shadows; keep it brutalist and sharp.
+- Avoid low-contrast text on the black canvas.
+
+## Signature
+- Oversized text watermarks (opacity 0.03) running horizontally behind content.
+- Hard-offset crimson shadows on hover.

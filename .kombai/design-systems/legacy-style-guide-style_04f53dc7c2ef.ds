@@ -1,0 +1,193 @@
+---
+name: "[Legacy SG] basement-inspiration"
+slug: legacy-style-guide-style_04f53dc7c2ef
+modes: [light]
+color:
+  palette:
+    canvas: "#ffffff"
+    ink: "#1a1a1a"
+    ink-2: "#555555"
+    ink-3: "#8a8a8a"
+    line: "#e2e2e2"
+    primary: "#2563eb"
+    on-primary: "#ffffff"
+    ground: "#000000"
+    on-ground: "#E6E6E6"
+    on-ground-bright: "#FFFFFF"
+    on-ground-muted: "#757575"
+    wordmark: "#CCCCCC"
+    surface-chip: "#2E2E2E"
+    surface-raised: "#161616"
+    hairline: "#1F1F1F"
+    hairline-strong: "#2A2A2A"
+    positive: "#E6E6E6"
+    negative: "#E6E6E6"
+  semantic:
+    background.canvas: "{color.palette.canvas}"
+    surface.default: "{color.palette.canvas}"
+    surface.raised: "{color.palette.canvas}"
+    text.primary: "{color.palette.ink}"
+    text.secondary: "{color.palette.ink-2}"
+    text.tertiary: "{color.palette.ink-3}"
+    text.link: "{color.palette.primary}"
+    border.default: "{color.palette.line}"
+    border.focus: "{color.palette.primary}"
+    primary.bg: "{color.palette.primary}"
+    primary.fg: "{color.palette.on-primary}"
+typography:
+  family: { primary: "Geist, \"Geist Fallback\", system-ui, sans-serif" }
+  textStyle:
+    heading-lg: { fontFamily: "Geist, \"Geist Fallback\", system-ui, sans-serif", fontSize: "24px", fontWeight: 600, lineHeight: 1.2 }
+    body-md: { fontFamily: "Geist, \"Geist Fallback\", system-ui, sans-serif", fontSize: "15px", fontWeight: 400, lineHeight: 1.5 }
+spacing:
+  xxs: "4px"
+  xs: "8px"
+  sm: "12px"
+  md: "16px"
+  lg: "24px"
+  xl: "40px"
+  xxl: "64px"
+  xxxl: "96px"
+radius:
+  none: "0px"
+---
+
+> Migrated from a legacy style guide.
+> The palette above is mapped from the original tokens, which are also preserved below.
+
+## Legacy style-guide tokens
+
+### Colors
+
+- `ground`: `#000000`
+- `on-ground`: `#E6E6E6`
+- `on-ground-bright`: `#FFFFFF`
+- `on-ground-muted`: `#757575`
+- `wordmark`: `#CCCCCC`
+- `surface-chip`: `#2E2E2E`
+- `surface-raised`: `#161616`
+- `hairline`: `#1F1F1F`
+- `hairline-strong`: `#2A2A2A`
+- `positive`: `#E6E6E6`
+- `negative`: `#E6E6E6`
+
+### Typography
+
+- `display-xl`: `{"family":"Geist, \"Geist Fallback\", system-ui, sans-serif","size":"180px","url":""}`
+- `display`: `{"family":"Geist, \"Geist Fallback\", system-ui, sans-serif","size":"87px","url":""}`
+- `headline-lg`: `{"family":"Geist, \"Geist Fallback\", sans-serif","size":"44px","url":""}`
+- `section-eyebrow`: `{"family":"Geist, \"Geist Fallback\", sans-serif","size":"24px","url":""}`
+- `subhead`: `{"family":"Geist, \"Geist Fallback\", sans-serif","size":"20px","url":""}`
+- `body`: `{"family":"Geist, \"Geist Fallback\", sans-serif","size":"16px","url":""}`
+- `label`: `{"family":"Geist, \"Geist Fallback\", sans-serif","size":"12px","url":""}`
+- `mono`: `{"family":"\"Geist Mono\", ui-monospace, monospace","size":"12px","url":""}`
+
+### Spacing
+
+- `xxs`: `4px`
+- `xs`: `8px`
+- `sm`: `12px`
+- `md`: `16px`
+- `lg`: `24px`
+- `xl`: `40px`
+- `xxl`: `64px`
+- `xxxl`: `96px`
+
+### Radius
+
+- `none`: `0px`
+
+## Design instructions
+
+## Token Instructions
+
+- `ground` (#000000) → the single canvas, edge to edge, everywhere
+- `on-ground` (#E6E6E6) → primary near-white text; reserve full #FFFFFF for max-contrast moments and logos
+- `on-ground-muted` (#757575) → section eyebrows like "Trusted by Visionaries" and "Capabilities"
+- `wordmark` (#CCCCCC) → the room-filling BSMNT footer wordmark in light grey
+- `surface-chip` (#2E2E2E) → small square capability tag chips
+- `surface-raised` (#161616) → hover wells / raised cells only
+- `hairline` (#1F1F1F) → grid cell borders and project-row rules; structure comes from hairlines, not shadows or fills
+- `radius.none` (0px) → sharp corners on everything — chips, cells, media frames, buttons alike; never round
+- typography → set display in Geist 600 with negative tracking and line-heights at or below the font size (78px on 87px) for the dense, engineered block; only running body and mono counters drop to 400
+- the palette is strictly monochrome — no brand hue, gradient, or glow; even semantic states stay monochrome
+- icons → always inherit `on-ground`, never tinted
+
+# basement.studio
+
+> Design spec — version alpha. Surfaces studied via Playwright: basement.studio homepage — `:root`/Tailwind tokens + computed-style probes of the hero, nav, section eyebrows, project rows, capability chips, and footer wordmark. basement.studio is a recognizable creative-dev studio (makers of BaseHub); lore below reflects its known house style.
+
+## Overview
+
+basement.studio runs on a **single canvas: pure black `#000000`**, edge to edge, with **no chromatic accent anywhere** — the entire identity is monochrome black / near-white / grey. Type is near-white `{colors.on-ground}` `#E6E6E6` (full `#FFFFFF` reserved for maximum-contrast moments and logos), and muted grey `{colors.on-ground-muted}` `#757575` carries section eyebrows like "Trusted by Visionaries" and "Capabilities."
+
+The typeface is **Geist** (Vercel's grotesque) for everything, with **Geist Mono** for small index/counter accents. The defining typographic trait is **density**: display type is set at weight 600 with strongly negative tracking (`-3.48px` on the 87px hero) and **line-heights pulled below the font size** (78px line on 87px text) so big headlines read as a tight, engineered block rather than airy marketing copy. The footer explodes this into a **room-filling BSMNT wordmark** in light grey `{colors.wordmark}` `#CCCCCC`.
+
+Structure is built from **thin hairline grid lines**, not shadows or fills: a square-celled grid holds the monochrome client logos; **full-width, rule-separated rows** present featured projects (left-aligned caption, right-aligned project name) over **grayscale WebGL / particle renders**; capabilities are listed with small **dark-grey square chips** (Product Strategy, UX/UI Design, Engineering…). Everything is **sharp-cornered** — radius is zero across the board — and depth is flat. The personality is confident and brutalist-precise: "cool shit that performs."
+
+## Colors
+
+**Monochrome only.** The system has **no brand hue** — its discipline *is* the absence of color. Ground is `{colors.ground}` `#000000`. Text steps through `{colors.on-ground}` `#E6E6E6` (primary), `{colors.on-ground-bright}` `#FFFFFF` (logos / peak contrast), and `{colors.on-ground-muted}` `#757575` (eyebrows, secondary labels). The giant footer wordmark sits at `{colors.wordmark}` `#CCCCCC`.
+
+**Surfaces** are barely-there steps up from black: `{colors.surface-chip}` `#2E2E2E` for capability chips and `{colors.surface-raised}` `#161616` for hover wells. **Hairlines** do the structural work — `{colors.hairline}` `#1F1F1F` for grid cells and project-row rules, `{colors.hairline-strong}` `#2A2A2A` for emphasized dividers. Semantic states stay monochrome to preserve the look.
+
+## Typography
+
+Family: **Geist** → `"Geist Fallback", system-ui, sans-serif`; **Geist Mono** for counters. Both are open-source (Vercel) — no substitute needed. Weight strategy is essentially **600 everywhere** (headlines, eyebrows, nav, subheads), dropping to **400** only for running body copy and mono counters. Tracking is **always negative on display sizes** and scales with size; line-height is set tight (≤1em, even <1 on the hero). This combination is the brand's signature voice.
+
+| Token | Size | Weight | Line-height | Tracking | Usage |
+|---|---|---|---|---|---|
+| display-xl | ~180px (fluid) | 600 | 0.9em | -0.04em | BSMNT footer wordmark |
+| display | 87px | 600 | 78px | -3.48px | Hero h1 |
+| headline-lg | 44px | 600 | 1em | -0.03em | Capability statement |
+| section-eyebrow | 24px | 600 | 24px | -0.72px | Muted section labels |
+| subhead | 20px | 600 | 20px | -0.4px | Hero supporting paragraph |
+| body | 16px | 400 | 24px | normal | Project descriptions |
+| label | 12px | 600 | 16px | normal | Nav links, "Menu", footer |
+| mono | 12px | 400 | 16px | normal | Index counters "(25)", "(28)" |
+
+## Layout
+
+Base unit **8px**, but the real spacing system is the **hairline grid**. The page is full-bleed black with a consistent left/right gutter; content aligns to a strict column structure. Key primitives: a **3-column square logo grid** (each cell outlined in `#1F1F1F`), **full-width project rows** separated by top rules with the caption left and the project title right, a **two-column capabilities block**, and a **massive wordmark band** at the footer. Whitespace is generous and intentional; sections are tall and let the WebGL imagery dominate.
+
+## Elevation & Depth
+
+**Flat by doctrine.** No drop shadows, no glows, no gradients on UI. Separation is achieved entirely through **hairline rules and the grid**, plus subtle surface steps (`#161616`, `#2E2E2E`). The only sense of "depth" comes from the **real-time grayscale 3D / particle renders** inside project media — depth is content, not chrome.
+
+## Shapes
+
+**Zero radius, everywhere.** `{rounded.none}` `0px` applies to chips, cells, media frames, and buttons alike. The geometry is rectilinear and technical — square cells, straight rules, hard corners — reinforcing the precision-engineered tone. Nothing is rounded or soft.
+
+## Components
+
+- **nav-link** — 12px Geist 600, near-white; top bar shows logo `basement.` + an animated bars glyph + "Menu".
+- **section-eyebrow** — 24px muted grey `#757575` label introducing each block.
+- **logo-grid-cell** — square, `#1F1F1F` hairline border, monochrome client logo centered; subtle `#161616` fill on hover.
+- **project-row** — full-width, top hairline rule, grayscale WebGL/particle or muted video media, left caption (16px body) and right-aligned project name (44px 600).
+- **capability-chip** — small square `#2E2E2E` tag, near-white 12px label, `4px 8px` padding (e.g. "Engineering", "Branding Systems").
+- **wordmark** — the room-filling BSMNT in light grey `#CCCCCC`, hard-edged, anchoring the footer above the nav list and social links.
+
+## Motion
+
+Transitions use a crisp ease (`cubic-bezier(0.65, 0, 0.35, 1)`) at 200–500ms. The studio's signature is **real-time WebGL / three.js**: particle fields and dithered 3D forms (e.g. the dissolving Vercel triangle) that react and animate, plus **scroll-driven reveals** and **magnetic/cursor-reactive hovers**. Motion is purposeful and performance-led — heavy on bespoke graphics, never gratuitous fade-ups.
+
+## Iconography
+
+Icons are **tiny monochrome line glyphs** (animated nav bars, social marks) at ~1.5px stroke, 12–16px. Use **Lucide** or the **Geist icon set** as an open-source substitute. Icons always inherit `{colors.on-ground}` — never tinted, in keeping with the all-monochrome rule.
+
+## Do's and Don'ts
+
+- **Do** keep the canvas pure black and the palette strictly monochrome — black / `#E6E6E6` / grey only.
+- **Do** set display type in Geist 600 with negative tracking and line-heights ≤ the font size for that dense, engineered block.
+- **Do** build structure from hairline grid rules and square cells, not shadows or fills.
+- **Do** keep every corner sharp — radius is `0` across the system.
+- **Do** render client logos and project imagery in grayscale; lean on WebGL/particle renders for hero visuals.
+- **Don't** introduce a brand accent color, gradient, or glow — the discipline is monochrome.
+- **Don't** round corners or add drop shadows to chips, cells, or media.
+- **Don't** loosen the type — avoid default/positive tracking and airy 1.5 line-heights on headlines.
+- **Don't** add decorative color photography; imagery is monochrome or real-time graphics.
+
+## Known Gaps
+
+- Core tokens (`#000000`, `#E6E6E6`, `#757575` ground/text, Geist + Geist Mono stack, 87px/78px/-3.48px hero, 12px 600 nav, zero radius) were read directly from computed styles. Surface/hairline hexes (`#161616`, `#1F1F1F`, `#2A2A2A`, chip `#2E2E2E`, wordmark `#CCCCCC`) and the fluid `display-xl` size are estimated from the rendered screenshots and should be treated as approximate.
+- The site is heavily WebGL/scroll-driven; exact motion curves, shader looks, and interior pages (Showcase, Lab, Blog) were not deeply probed — motion notes describe the observed/known house style.
