@@ -105,15 +105,16 @@ export async function POST(request: Request) {
     return invalid("Enter a valid message.");
   }
 
-  const web3FormsData = new FormData();
-  web3FormsData.set("access_key", accessKey);
-  web3FormsData.set("subject", "New Krishna Automobiles contact request");
-  web3FormsData.set("from_name", "Krishna Automobiles Website");
-  web3FormsData.set("name", name);
-  web3FormsData.set("phone", phone);
-  web3FormsData.set("email", email);
-  web3FormsData.set("vehicle", vehicle);
-  web3FormsData.set("message", message);
+  const web3FormsData = {
+    access_key: accessKey,
+    subject: "New Krishna Automobiles contact request",
+    from_name: "Krishna Automobiles Website",
+    name,
+    phone,
+    email,
+    vehicle,
+    message,
+  };
 
   let response: Response;
   let result: { success?: boolean; message?: string };
@@ -122,8 +123,11 @@ export async function POST(request: Request) {
     console.info("[contact] submitting request to Web3Forms");
     response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      headers: { Accept: "application/json" },
-      body: web3FormsData,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(web3FormsData),
       cache: "no-store",
     });
     result = (await response.json()) as { success?: boolean; message?: string };
