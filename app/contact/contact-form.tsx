@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { type FormEvent, useRef, useState } from "react";
 
 const messageLimit = 1000;
+const web3FormsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
 export function ContactForm() {
   const router = useRouter();
@@ -26,14 +27,30 @@ export function ContactForm() {
       return;
     }
 
+    if (!web3FormsAccessKey) {
+      setSubmitError("Contact form is not configured. Please call the workshop instead.");
+      setSubmitStatus("error");
+      return;
+    }
+
     setSubmitStatus("sending");
     setSubmitError("");
     isSubmitting.current = true;
 
     try {
-      const response = await fetch("/api/contact", {
+      const data = Object.fromEntries(new FormData(form).entries());
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: new FormData(form),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          ...data,
+          access_key: web3FormsAccessKey,
+          subject: "New Krishna Automobiles contact request",
+          from_name: "Krishna Automobiles Website",
+        }),
       });
       const result = (await response.json()) as { success?: boolean; message?: string };
 
